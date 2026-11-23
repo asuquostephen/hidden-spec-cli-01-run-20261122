@@ -670,7 +670,7 @@ function makeV4aEdit(
       chunks.push(cur);
       continue;
     }
-    if (l.trim() === '*** End of File') {
+    if (l === '*** End of File') {
       if (cur === null) throw new Exit2(`error: parse ${r.no}`);
       cur.eof = true;
       cur = null;
